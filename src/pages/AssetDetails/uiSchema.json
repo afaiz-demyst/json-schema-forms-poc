@@ -1,0 +1,27 @@
+{
+  "ui:submitButtonOptions": {
+    "norender": true
+  },
+  "assetCategory": {
+    "ui:widget": "SelectBox"
+  },
+  "assetType": {
+    "ui:widget": "SelectBox"
+  },
+  "seller": {
+    "ui:widget": "RadioButtonGroup"
+  },
+  "condition": {
+    "ui:widget": "RadioButtonGroup"
+  },
+  "assetAge": {
+    "ui:widget": "SelectBox"
+  },
+  "ui:order": [
+    "assetCategory",
+    "assetType",
+    "seller",
+    "condition",
+    "assetAge"
+  ]
+}

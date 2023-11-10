@@ -1,0 +1,8 @@
+.select-icon {
+  background-image: url('./assets/icon.svg');
+  background-position:
+    calc(100% - 15px) calc(1em + 6px),
+    calc(100% - 15px) calc(1em + 6px),
+    100% 0;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,8 @@
+{
+  "businessAge":{
+    "ui:widget": "RadioButtonGroup"
+  },
+  "ui:submitButtonOptions": {
+    "norender": true
+  }
+}

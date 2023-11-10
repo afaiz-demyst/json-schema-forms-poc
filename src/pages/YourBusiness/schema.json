@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "businessAge": {
+      "type": "string",
+      "title": "How long has your business been trading?",
+      "anyOf": [
+        {
+          "type": "string",
+          "title": "Less than 12 months",
+          "enum": [
+            "LESS_THAN_12_MONTHS"
+          ]
+        },
+        {
+          "type": "string",
+          "title": "More than 12 months",
+          "enum": [
+            "MORE_THAN_12_MONTHS"
+          ]
+        }
+      ]
+    }
+  }
+}

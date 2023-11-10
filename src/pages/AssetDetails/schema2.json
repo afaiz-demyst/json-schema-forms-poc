@@ -1,0 +1,228 @@
+{
+  "type": "object",
+  "title": "Asset Details",
+  "description": "Enter a few details about your business’ vehicle or equipment so we can calculate an interest rate.",
+  "definitions": {
+    "assetCategoryOptions": {
+      "anyOf": [
+        {
+          "type": "string",
+          "title": "Car, van or ute",
+          "enum": [
+            "CAR_VAN_UTE"
+          ]
+        },
+        {
+          "type": "string",
+          "title": "Truck, bus or trailer",
+          "enum": [
+            "TRUCK_BUS_TRAILER"
+          ]
+        }
+      ]
+    }
+  },
+  "properties": {
+    "assetCategory": {
+      "type": "string",
+      "title": "Asset Category",
+      "$ref": "#/definitions/assetCategoryOptions"
+    },
+    "seller": {
+      "type": "string",
+      "title": "Seller",
+      "anyOf": [
+        {
+          "type": "string",
+          "title": "Dealership / Retailer",
+          "enum": [
+            "DEALERSHIP_RETAILER"
+          ]
+        },
+        {
+          "type": "string",
+          "title": "Private Sale",
+          "enum": [
+            "PRIVATE_SALE"
+          ]
+        }
+      ]
+    },
+    "condition": {
+      "type": "string",
+      "title": "Condition",
+      "anyOf": [
+        {
+          "type": "string",
+          "title": "New or Demo",
+          "enum": [
+            "NEW_DEMO"
+          ]
+        },
+        {
+          "type": "string",
+          "title": "Used",
+          "enum": [
+            "USED"
+          ]
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "assetCategory": {
+      "oneOf": [
+        {
+          "properties": {
+            "assetCategory": {
+              "enum": [
+                "TRUCK_BUS_TRAILER"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "assetCategory": {
+              "enum": [
+                "CAR_VAN_UTE"
+              ]
+            },
+            "assetType": {
+              "type": "string",
+              "title": "Asset Type",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "title": "Car",
+                  "enum": [
+                    "CAR"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "Van",
+                  "enum": [
+                    "VAN"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "Utility Vehicle",
+                  "enum": [
+                    "UTE"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "condition": {
+      "oneOf": [
+        {
+          "properties": {
+            "condition": {
+              "enum": [
+                "NEW_DEMO"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "condition": {
+              "enum": [
+                "USED"
+              ]
+            },
+            "assetAge": {
+              "type": "string",
+              "title": "Approximate age of asset",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "title": "1 year old or less",
+                  "enum": [
+                    1
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "2 years old or less",
+                  "enum": [
+                    2
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "3 year old or less",
+                  "enum": [
+                    3
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "4 years old or less",
+                  "enum": [
+                    4
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "5 years old or less",
+                  "enum": [
+                    5
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "6 years old or less",
+                  "enum": [
+                    6
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "7 years old or less",
+                  "enum": [
+                    7
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "8 years old or less",
+                  "enum": [
+                    8
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "9 year old or less",
+                  "enum": [
+                    9
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "10 years old or less",
+                  "enum": [
+                    10
+                  ]
+                },
+                {
+                  "type": "string",
+                  "title": "11 year old or more",
+                  "enum": [
+                    11
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

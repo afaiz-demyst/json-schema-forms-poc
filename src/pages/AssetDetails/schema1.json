@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "title": "Asset Details",
+  "description": "Enter a few details about your business’ vehicle or equipment so we can calculate an interest rate.",
+  "definitions": {
+    "assetCategoryOptions": {
+      "anyOf": [
+        {
+          "type": "string",
+          "title": "Car, van or ute",
+          "enum": [
+            "CAR_VAN_UTE"
+          ]
+        },
+        {
+          "type": "string",
+          "title": "Truck, bus or trailer",
+          "enum": [
+            "TRUCK_BUS_TRAILER"
+          ]
+        }
+      ]
+    }
+  },
+  "properties": {
+    "assetCategory": {
+      "type": "string",
+      "title": "Asset Category",
+      "$ref": "#/definitions/assetCategoryOptions"
+    }
+  }
+}
